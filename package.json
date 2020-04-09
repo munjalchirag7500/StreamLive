@@ -10,7 +10,8 @@
     "e2e": "ng e2e"
   },
   "engines": {
-    "node": "12.16.1","npm": "6.14.4"
+    "node": "12.16.1",
+    "npm": "6.13.4"
   },
   "private": true,
   "dependencies": {
@@ -25,9 +26,11 @@
     "@angular/platform-browser-dynamic": "~9.0.7",
     "@angular/router": "~9.0.7",
     "bootstrap": "^4.4.1",
+    "express": "^4.17.1",
     "jquery": "^3.4.1",
     "mat-video": "^2.8.0",
     "mdbootstrap": "^4.15.0",
+    "path": "^0.12.7",
     "popper.js": "^1.16.1",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
