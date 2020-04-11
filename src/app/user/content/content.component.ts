@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/app/services/user.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-content',
@@ -7,13 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContentComponent implements OnInit {
   
-  constructor() { }
-  
+  constructor(private user:UserService,private http:HttpClient) { }
+  episodeData;
+  link :any=[];
   ngOnInit(): void {
-  }
-  playVideo(){
-    let url="https://sharer.pw/player/n5yhSuRyhlW";
-    
-  }
+    this.user.fetchEpisode().subscribe(show=>{
+      console.log(show)
+      this.episodeData=show;
+    });
+  } 
 
 }
